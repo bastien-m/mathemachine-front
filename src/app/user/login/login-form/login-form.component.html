@@ -1,0 +1,23 @@
+<div class="container-flex">
+    <form [formGroup]="loginForm" class="light-theme" (ngSubmit)="submit()">
+        <div>
+            <mat-form-field>
+                <mat-label>Login</mat-label>
+                <input matInput placeholder="Login" formControlName="login"/>
+                <mat-error *ngIf="login.invalid && (login.dirty || login.touched)">
+                    Login is required
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input matInput placeholder="password" type="password" formControlName="password" />
+                <mat-error *ngIf="password.invalid && (password.dirty || password.touched)">
+                    Login is required
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <button mat-raised-button  color="primary" type="submit">Login</button>
+    </form>
+</div>

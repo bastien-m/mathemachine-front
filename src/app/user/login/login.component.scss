@@ -1,11 +1,35 @@
+@import "../../../colors";
+
 .left-pane {
-  background-color: rgb(20, 20, 20);
-  color: white;
+  background-color: map-get($dark-palette, 900);
+  display: flex;
   width: 60%;
+  flex-direction: column;
+  justify-content: center;
+
+  img {
+    max-width: 500px;
+  }
+
+  .title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    h1 {
+      display: inline-block;
+    }
+    p {
+      font-size: larger;
+      align-self: center;
+      display: inline-block;
+    }
+  }
 }
 
 .right-pane {
-  background-color: rgb(10, 10, 10);
+  color: map-get(map-get($dark-palette, "contrast"), 50);
+  background-color: map-get($dark-palette, 100);
   width: 40%;
   min-width: 400px;
 }

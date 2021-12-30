@@ -1,4 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+
+@import "@angular/material/theming";
+@import "colors";
+
+@include mat.core();
+
+$my-primary: mat.define-palette($dark-palette, 700, 800, 900);
+$my-accent: mat.define-palette($dark-palette, 50, 100, 200);
+
+$dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $my-primary,
+      accent: $my-accent,
+    ),
+  )
+);
+
+$light-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $my-primary,
+      accent: $my-primary,
+    ),
+  )
+);
+
+@include mat.all-component-themes($dark-theme);
+
+.light-theme {
+  @include mat.all-component-themes($light-theme);
+}
 
 html,
 body {
@@ -7,6 +40,7 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: map-get($dark-palette, 50);
 }
 
 .container {

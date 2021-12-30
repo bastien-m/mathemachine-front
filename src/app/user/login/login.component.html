@@ -1,8 +1,12 @@
 <div class="container-flex">
   <div class="left-pane">
-    <h1>Mathemachine - Train your brain with joy</h1>
+    <img src="assets/background-brain.png"/>
+    <div class="title">
+        <h1>Mathemachine </h1><p>&nbsp; - Train your brain with joy</p>
+    </div>
   </div>
   <div class="right-pane">
     <!-- Login form -->
+    <app-login-form (submitLogin)="handleLogin($event)"></app-login-form>
   </div>
 </div>
