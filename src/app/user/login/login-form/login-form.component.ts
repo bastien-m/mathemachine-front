@@ -20,9 +20,7 @@ export class LoginFormComponent implements OnInit {
   ngOnInit(): void {}
 
   submit() {
-    if (this.loginForm.valid) {
-      this.submitLogin.emit(this.loginForm)
-    }
+    this.submitLogin.emit(this.loginForm)
   }
 
   get login(): FormControl { 

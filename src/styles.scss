@@ -41,6 +41,7 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   color: map-get($dark-palette, 50);
+  background-color: map-get($dark-palette, 900);
 }
 
 .container {
