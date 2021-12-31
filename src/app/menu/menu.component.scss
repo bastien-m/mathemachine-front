@@ -1,0 +1,10 @@
+@import "../../colors";
+
+.toolbar-grey {
+  background-color: map-get($dark-palette, 800);
+}
+
+.separator {
+  display: inline-block;
+  margin-left: 30px;
+}

@@ -1,1 +1,8 @@
-<p>menu works!</p>
+<mat-toolbar class="toolbar-grey">
+    <span>Mathemachine</span>
+    <span class="separator"></span>
+    <button mat-icon-button [routerLink]="['/', 'home']">
+        <mat-icon>home</mat-icon> Home
+    </button>
+</mat-toolbar>
+<router-outlet></router-outlet>
