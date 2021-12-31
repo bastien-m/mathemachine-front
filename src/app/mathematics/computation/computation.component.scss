@@ -1,0 +1,32 @@
+@import "../../../colors";
+
+.container-flex {
+  flex-direction: column;
+  margin: 50px 30px 0 30px;
+
+  * {
+    align-self: center;
+  }
+}
+
+.general-information {
+  max-width: 800px;
+  margin: 30px;
+  text-align: center;
+}
+
+.nb {
+  margin-bottom: 30px;
+}
+
+.computation-zone {
+  background-color: map-get($dark-palette, 800);
+  width: 90%;
+  max-width: 1000px;
+}
+
+.operand {
+  display: inline-block;
+  margin: 10px;
+  font-size: larger;
+}

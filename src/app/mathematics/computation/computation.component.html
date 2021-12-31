@@ -1,1 +1,34 @@
-<p>computation works!</p>
+<div class="container-flex">
+    <h1>Computation</h1>
+    
+    <div class="general-information">
+        <p>
+            This module provide a way to train your mental computation, press start to begin the exercice.
+            You will have 60 seconds to answer the more computation you can, at the end you will have a quick recap of your test.
+        </p>
+        <div class="nb">Coming soon, your statistics will be stored with your account with a dedicated module to see how you improved (or not)</div>
+
+        
+        <button [disabled]="isStarted" mat-raised-button color="primary" (click)="start()">Start</button>
+    </div>
+
+
+
+    <div class="computation-zone" *ngIf="isStarted">
+        <span class="operand">{{firstNumber}}</span> 
+        <span class="operand">{{operator}}</span>
+        <span class="operand">{{secondNumber}}</span>
+        <span class="operand">=</span>
+        <mat-form-field appearance="fill">
+            <mat-label>Result</mat-label>
+            <input matInput placeholder="Result" [(ngModel)]="currentResponse" (keyup.enter)="verify()"/>
+
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="getNextRound()">Next</button>
+        <button mat-raised-button color="accent" (click)="endRound()">End</button>
+    </div>
+
+    <div class="results" *ngIf="displayResult">
+        You answered {{numberOfAnswers}} computation(s) with {{numberOfErrors}} error(s) for an average of {{average}}% of accuracy
+    </div>
+</div>
