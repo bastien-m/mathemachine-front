@@ -12,6 +12,10 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
   },
   {
+    path: 'mathematics',
+    loadChildren: () => import('./mathematics/mathematics.module').then((m) => m.MathematicsModule)
+  },
+  {
     path: '**',
     redirectTo: '/user/login',
     pathMatch: 'full',
